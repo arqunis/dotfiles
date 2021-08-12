@@ -1,0 +1,17 @@
+.vscode/
+
+build/
+
+.ccls-cache/
+.cache/
+.clangd/
+zig-cache/
+zig-out/
+.buildconfig
+
+compile_commands.json
+
+.envp
+
+.notes.txt
+.notes.md

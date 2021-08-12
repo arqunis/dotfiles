@@ -1,0 +1,9 @@
+[user]
+	email = acdenissk69@gmail.com
+	name = Alex M. M.
+[pull]
+	rebase = true
+[init]
+	defaultBranch = master
+[submodule]
+	recurse = true
