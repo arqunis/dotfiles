@@ -3,6 +3,8 @@
 	name = Alex M. M.
 [pull]
 	rebase = true
+[rebase]
+	updateRefs = true
 [init]
 	defaultBranch = master
 [submodule]
