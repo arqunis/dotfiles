@@ -30,6 +30,10 @@ if status is-login
     fish_add_path "$HOME/dev/root/bin"
   end
 
+  if test -d "$HOME/.cargo/bin"
+    fish_add_path "$HOME/.cargo/bin"
+  end
+
   if test -d "$HOME/.dotnet/tools"
     fish_add_path "$HOME/.dotnet/tools"
   end
