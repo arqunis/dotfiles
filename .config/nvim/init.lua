@@ -133,7 +133,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 vim.keymap.set("n", "Q", "<Nop>")
 
 -- Disable :find-manpage keybind
-vim.keymap.set({ "n", "i" }, "K", "<Nop>")
+vim.keymap.set("n", "K", "<Nop>")
 
 function InsertTabWrapper()
     local col = vim.fn.col(".") - 1
