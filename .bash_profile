@@ -7,10 +7,13 @@ export VISUAL=${EDITOR}
 [[ -z "${XDG_DATA_HOME}" ]] && export XDG_DATA_HOME="${HOME}/.local/share"
 [[ -z "${XDG_CACHE_HOME}" ]] && export XDG_CACHE_HOME="${HOME}/.cache"
 
-[[ -d "${HOME}/dev/root/bin" ]] && export PATH="${HOME}/dev/root/bin:${PATH}"
 [[ -d "${HOME}/.local/bin" ]] && export PATH="${HOME}/.local/bin:${PATH}"
 [[ -d "${HOME}/.cargo/bin" ]] && export PATH="${HOME}/.cargo/bin:${PATH}"
 [[ -d "${HOME}/.dotnet/tools" ]] && export PATH="${HOME}/.dotnet/tools:${PATH}"
+
+if [[ -f "${HOME}/.custom/source.sh" ]]; then
+    source "${HOME}/.custom/source.sh"
+fi
 
 [[ -z "${SSH_AUTH_SOCK}" ]] && export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 

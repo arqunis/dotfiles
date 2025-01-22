@@ -26,16 +26,16 @@ if status is-login
     fish_add_path "$HOME/.local/bin"
   end
 
-  if test -d "$HOME/dev/root/bin"
-    fish_add_path "$HOME/dev/root/bin"
-  end
-
   if test -d "$HOME/.cargo/bin"
     fish_add_path "$HOME/.cargo/bin"
   end
 
   if test -d "$HOME/.dotnet/tools"
     fish_add_path "$HOME/.dotnet/tools"
+  end
+
+  if test -f "$HOME/.custom/source.fish"
+    source "$HOME/.custom/source.fish"
   end
 
   if test "$XDG_SESSION_TYPE" = "wayland"

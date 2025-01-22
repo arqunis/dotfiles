@@ -1,0 +1,3 @@
+if test -d "$HOME/.custom/$PROJECT$"
+    fish_add_path --path "$HOME/.custom/$PROJECT$/bin"
+end
