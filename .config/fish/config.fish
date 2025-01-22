@@ -47,13 +47,3 @@ if status is-login
     set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
   end
 end
-
-# Interactive shells
-if status is-interactive
-  # Manage dotfiles easily
-  #if test -d $HOME/dotfiles
-  #  function config
-  #    command git --git-dir=$HOME/dotfiles --work-tree=$HOME $argv
-  #  end
-  #end
-end
