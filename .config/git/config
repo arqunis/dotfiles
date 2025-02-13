@@ -6,7 +6,7 @@
 [rebase]
 	updateRefs = true
 [init]
-	defaultBranch = master
+	defaultBranch = main
 [submodule]
 	recurse = true
 [core]
