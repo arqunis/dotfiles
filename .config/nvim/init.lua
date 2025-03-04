@@ -24,7 +24,28 @@ Plug("editorconfig/editorconfig-vim")
 
 Plug("tpope/vim-vinegar")
 
+Plug("nvim-lua/plenary.nvim")
+Plug("MunifTanjim/nui.nvim")
+Plug("nvim-tree/nvim-web-devicons")
+Plug("nvim-neo-tree/neo-tree.nvim", { ["on"] = "Neotree" })
+
 vim.call("plug#end")
+
+vim.api.nvim_create_autocmd("User", {
+    pattern = "neo-tree.nvim",
+    once = true,
+    callback = function()
+        require("neo-tree").setup({
+            filesystem = {
+                filtered_items = {
+                    visible = true,
+                    hide_dotfiles = false,
+                    hide_gitignored = true,
+                },
+            },
+        })
+    end,
+})
 
 ---- Theme.
 vim.opt.background = "dark"
