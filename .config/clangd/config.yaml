@@ -1,2 +1,8 @@
 InlayHints:
   Enabled: No
+
+If:
+  PathMatch: .*\.h
+
+CompileFlags:
+  Add: [-Wno-unused-function, -Wno-unused-macros]
