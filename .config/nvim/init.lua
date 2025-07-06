@@ -54,13 +54,10 @@ vim.opt.sidescroll = 3
 vim.opt.ruler = true
 vim.opt.colorcolumn = "80"
 
--- Use spaces in lieu of tabs.
+-- Write spaces instead of tabs, which are equal to four columns.
 vim.opt.expandtab = true
-vim.opt.smarttab = true
-
--- A tab is equal to four spaces.
-vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.softtabstop = -1
 
 -- Copy indents when creating new lines.
 vim.opt.autoindent = true
@@ -78,13 +75,6 @@ vim.keymap.set("n", "\\", ":noh<cr>")
 
 -- Allow resizing windows with the mouse
 vim.opt.mouse = "a"
-
--- Do not make backups each time before overwriting a file
-vim.opt.backup = false
-vim.opt.writebackup = false
-
--- Neither make swaps of currently open files
-vim.opt.swapfile = false
 
 -- Limit the amount of lines in the command line.
 vim.opt.cmdheight = 2
