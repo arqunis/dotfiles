@@ -26,10 +26,6 @@ vim.opt.background = "dark"
 if vim.fn.has("termguicolors") then
     vim.opt.termguicolors = true
 
-    -- Unnecessary in Neovim, but kept just in case.
-    -- vim.opt.t_8f="\\<Esc>[37;2;%lu;%lu;%lum"
-    -- vim.opt.t_8b="\\<Esc>[48;2;%lu;%lu;%lum"
-
     vim.cmd.colorscheme("catppuccin-macchiato")
     vim.g.lightline = { colorscheme = "catppuccin" }
 end
