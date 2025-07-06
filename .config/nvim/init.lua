@@ -122,15 +122,6 @@ end
 -- Utilise builtin autocompletion
 vim.keymap.set("i", "<tab>", InsertTabWrapper, { expr = true })
 
--- Move between panels using <c-hjkl>
-vim.keymap.set("n", "<c-h>", "<c-w>h")
-vim.keymap.set("n", "<c-j>", "<c-w>j")
-vim.keymap.set("n", "<c-k>", "<c-w>k")
-vim.keymap.set("n", "<c-l>", "<c-w>l")
-
 -- Split vertically using <c-w>n
 vim.keymap.set("n", "<c-w>n", "<c-w>s")
 vim.keymap.set("n", "<c-w><c-n>", "<c-w>s")
-
--- Close the current panel using <c-q>
-vim.keymap.set("n", "<c-q>", "<c-w>q")
