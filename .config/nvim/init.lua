@@ -93,11 +93,6 @@ vim.opt.shortmess:append("c")
 vim.opt.signcolumn = "yes"
 vim.opt.lazyredraw = true
 
--- Searching for files easier
--- credit: https://youtu.be/XA2WjJbmmoM?t=425
-vim.opt.path:append("**")
-vim.opt.wildmenu = true
-
 ---- Autocommands
 
 -- Strip trailing whitespace on save
