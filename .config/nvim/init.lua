@@ -134,17 +134,3 @@ vim.keymap.set("n", "<c-w><c-n>", "<c-w>s")
 
 -- Close the current panel using <c-q>
 vim.keymap.set("n", "<c-q>", "<c-w>q")
-
--- Same as above, but for the terminal mode.
-vim.keymap.set("t", "<c-h>", "<c-\\><c-n><c-w>h")
-vim.keymap.set("t", "<c-j>", "<c-\\><c-n><c-w>j")
-vim.keymap.set("t", "<c-k>", "<c-\\><c-n><c-w>k")
-vim.keymap.set("t", "<c-l>", "<c-\\><c-n><c-w>l")
-
-vim.keymap.set("t", "<c-w>n", "<c-\\><c-n><c-w>s")
-vim.keymap.set("t", "<c-w><c-n>", "<c-\\><c-n><c-w>s")
-
-vim.keymap.set("t", "<c-q>", "<c-\\><c-n><c-w>q")
-
--- Turn to normal mode from terminal mode with Escape.
-vim.keymap.set("t", "<esc>", "<c-\\><c-n>")
