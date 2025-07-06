@@ -54,11 +54,6 @@ vim.opt.sidescroll = 3
 vim.opt.ruler = true
 vim.opt.colorcolumn = "80"
 
--- Improve regex.
-vim.opt.magic = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
 -- Use spaces in lieu of tabs.
 vim.opt.expandtab = true
 vim.opt.smarttab = true
