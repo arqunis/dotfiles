@@ -91,7 +91,6 @@ vim.opt.cmdheight = 2
 
 vim.opt.shortmess:append("c")
 vim.opt.signcolumn = "yes"
-vim.opt.lazyredraw = true
 
 ---- Autocommands
 
