@@ -65,9 +65,6 @@ vim.opt.shiftwidth = 4
 -- Copy indents when creating new lines.
 vim.opt.autoindent = true
 
--- Always use `\n` newlines for delimiting a line.
-vim.opt.fileformat = "unix"
-
 -- Remove autoindents and newlines when backspacing.
 vim.opt.backspace = { "indent", "eol", "start" }
 
