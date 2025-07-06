@@ -68,9 +68,6 @@ vim.opt.autoindent = true
 -- Remove autoindents and newlines when backspacing.
 vim.opt.backspace = { "indent", "eol", "start" }
 
--- When changing buffers, hide them
-vim.opt.hidden = true
-
 -- Highlight text when searching
 vim.opt.incsearch = true
 vim.opt.showmatch = true
