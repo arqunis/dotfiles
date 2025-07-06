@@ -3,9 +3,7 @@ vim.cmd.language("en_US.UTF-8")
 vim.opt.encoding = "utf-8"
 
 ---- Syntax highlighting
-vim.cmd.filetype("on")
 vim.cmd.syntax("on")
-vim.cmd.filetype({ "plugin", "on" })
 
 ---- Absolute line numbering
 vim.opt.number = true
