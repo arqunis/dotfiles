@@ -59,9 +59,6 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = -1
 
--- Copy indents when creating new lines.
-vim.opt.autoindent = true
-
 -- Remove autoindents and newlines when backspacing.
 vim.opt.backspace = { "indent", "eol", "start" }
 
