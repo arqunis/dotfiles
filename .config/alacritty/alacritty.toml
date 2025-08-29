@@ -40,4 +40,4 @@ cyan = "#33c7de"
 white = "#ffffff"
 
 [terminal]
-shell = { program = "/home/alex/.custom/fish/bin/fish", args = ["--login"] }
+shell = { program = "fish", args = ["--login"] }
