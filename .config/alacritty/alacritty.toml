@@ -38,6 +38,3 @@ blue = "#2a7bde"
 magenta = "#c061cb"
 cyan = "#33c7de"
 white = "#ffffff"
-
-[terminal]
-shell = { program = "fish", args = ["--login"] }
