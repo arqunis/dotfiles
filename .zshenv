@@ -17,8 +17,8 @@ export NVM_DIR="$XDG_DATA_HOME/nvm"
 typeset -U path
 
 for dir in "$HOME/.local/bin" "$HOME/.cargo/bin" "$HOME/.dotnet/tools"; do
-  if [[ -d dir ]]; then
-    path=(dir $path)
+  if [[ -d "$dir" ]]; then
+    path=($dir $path)
   fi
 done
 
