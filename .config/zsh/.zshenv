@@ -20,6 +20,10 @@ for dir in "$HOME/.local/bin" "$HOME/.cargo/bin" "$HOME/.dotnet/tools"; do
   fi
 done
 
+if [[ -f "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]]; then
+    source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]]
+fi
+
 if [[ -f "${HOME}/.custom/source.sh" ]]; then
     source "${HOME}/.custom/source.sh"
 fi
