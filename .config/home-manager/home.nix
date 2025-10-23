@@ -71,6 +71,8 @@
     # EDITOR = "emacs";
   };
 
+  xdg.enable = true;
+
   programs.git = {
     enable = true;
 
