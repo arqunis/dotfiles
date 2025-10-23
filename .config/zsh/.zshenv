@@ -3,10 +3,6 @@ export HISTFILE="$ZDOTDIR/.zhistory"
 export HISTSIZE=10000
 export SAVEHIST=10000
 
-export EDITOR=nvim
-export GIT_EDITOR=${EDITOR}
-export VISUAL=${EDITOR}
-
 typeset -U path
 
 for dir in "$HOME/.local/bin" "$HOME/.cargo/bin" "$HOME/.dotnet/tools"; do

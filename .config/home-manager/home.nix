@@ -55,9 +55,16 @@
   home.file = {
   };
 
-  home.sessionVariables = {
-    # EDITOR = "emacs";
-  };
+  home.sessionVariables = (
+    let
+      editor = "nvim";
+    in
+    {
+      EDITOR = editor;
+      GIT_EDITOR = editor;
+      VISUAL = editor;
+    }
+  );
 
   xdg.enable = true;
 
