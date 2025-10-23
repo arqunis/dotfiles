@@ -30,11 +30,6 @@ bindkey "^[[1;5C" forward-word
 # C-RightArrow
 bindkey "^[[1;5D" backward-word
 
-# Node Version Manager
-[[ -z "${NVM_DIR}" ]] && export NVM_DIR="$HOME/.config/nvm"
-
-[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
-
 # Plugins
 [[ -d "$ZDOTDIR/plugins/zsh-syntax-highlighting" ]] && source "$ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 [[ -d "$ZDOTDIR/plugins/zsh-autosuggestions" ]] && source "$ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"

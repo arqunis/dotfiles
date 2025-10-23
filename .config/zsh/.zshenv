@@ -12,8 +12,6 @@ export EDITOR=nvim
 export GIT_EDITOR=${EDITOR}
 export VISUAL=${EDITOR}
 
-export NVM_DIR="$XDG_DATA_HOME/nvm"
-
 typeset -U path
 
 for dir in "$HOME/.local/bin" "$HOME/.cargo/bin" "$HOME/.dotnet/tools"; do
