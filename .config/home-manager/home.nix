@@ -53,7 +53,15 @@
   ];
 
   home.file = {
-    ".config/clangd/config.yaml".text = ''
+  };
+
+  home.sessionVariables = {
+    # EDITOR = "emacs";
+  };
+
+  xdg.enable = true;
+
+  xdg.configFile."clangd/config.yaml".text = ''
     InlayHints:
       Enabled: No
 
@@ -65,13 +73,6 @@
     CompileFlags:
       Add: [-Wno-unused-function, -Wno-unused-macros]
     '';
-  };
-
-  home.sessionVariables = {
-    # EDITOR = "emacs";
-  };
-
-  xdg.enable = true;
 
   programs.git = {
     enable = true;
