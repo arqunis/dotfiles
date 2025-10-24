@@ -36,9 +36,7 @@
     clang
     clang-tools
     go
-    php
     rustup
-    dotnetCorePackages.dotnet_9.sdk
     nodejs
     pnpm
     oxlint
