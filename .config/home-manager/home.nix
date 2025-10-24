@@ -19,35 +19,42 @@
     time
     htop
 
-    gccStdenv
-    clangStdenv
-
-    neovim
-
     ripgrep
     fd
     tokei
 
     fastfetch
 
-    pkg-config
-    cmake
-    ninja
-    clang
-    clang-tools
-    go
-    rustup
-    nodejs
-    pnpm
-    oxlint
-
-    uv
+    neovim
 
     hledger
     hledger-ui
     hledger-web
 
     syncthing
+
+    # C, C++
+    gccStdenv
+    clangStdenv
+    pkg-config
+    cmake
+    ninja
+    clang
+    clang-tools
+
+    # Go
+    go
+
+    # Rust
+    rustup
+
+    # JS/TS
+    nodejs
+    pnpm
+    oxlint
+
+    # Python
+    uv
   ];
 
   home.file = {
