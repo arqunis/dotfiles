@@ -86,6 +86,8 @@
       Add: [-Wno-unused-function, -Wno-unused-macros]
     '';
 
+  programs.bash.enable = true;
+
   programs.git = {
     enable = true;
 
