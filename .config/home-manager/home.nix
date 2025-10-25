@@ -19,6 +19,8 @@
     time
     htop
 
+    nh
+
     ripgrep
     fd
     tokei
