@@ -85,7 +85,9 @@
 
   programs.bash.enable = true;
 
-  programs.zsh = {
+  programs.zsh = let
+    cacheHome = config.xdg.cacheHome;
+  in {
     enable = true;
 
     # FIXME: Change to `${config.xdg.configHome}/zsh` once Home Manager is upgraded to 25.11
@@ -134,7 +136,7 @@
       zstyle ':completion:*' completer _extensions _complete _approximate
 
       zstyle ':completion:*' use-cache on
-      zstyle ':completion:*' cache-path "$HOME/.cache/zsh/.zshcompcache"
+      zstyle ':completion:*' cache-path "${cacheHome}/zsh/.zshcompcache"
 
       zstyle ':completion:*' complete true
 
