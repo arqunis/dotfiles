@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   home.username = "alex";
@@ -12,6 +12,15 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "25.05"; # Please read the comment before changing.
+
+  nix = {
+    package = pkgs.nix;
+    registry = {
+      self.flake = inputs.self;
+      nixpkgs.flake = inputs.nixpkgs;
+    };
+    settings.experimental-features = [ "nix-command" "flakes" ];
+  };
 
   home.packages = with pkgs; [
     file
