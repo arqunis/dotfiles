@@ -70,9 +70,9 @@
   };
 
   home.sessionPath = [
-    "$HOME/.local/bin"
-    "$HOME/.cargo/bin"
-    "$HOME/.dotnet/tools"
+    "${config.home.homeDirectory}/.local/bin"
+    "${config.home.homeDirectory}/.cargo/bin"
+    "${config.home.homeDirectory}/.dotnet/tools"
   ];
 
   xdg.enable = true;
