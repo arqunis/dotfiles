@@ -75,7 +75,14 @@
     "${config.home.homeDirectory}/.dotnet/tools"
   ];
 
-  xdg.enable = true;
+  xdg = {
+    enable = true;
+
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+    };
+  };
 
   xdg.configFile."clangd/config.yaml".text = ''
     InlayHints:
