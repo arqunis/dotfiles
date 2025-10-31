@@ -1,18 +1,6 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
-  home.username = "alex";
-  home.homeDirectory = "/home/alex";
-
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
-  home.stateVersion = "25.05"; # Please read the comment before changing.
-
   nix = {
     package = pkgs.nix;
     registry = {
@@ -21,6 +9,9 @@
     };
     settings.experimental-features = [ "nix-command" "flakes" ];
   };
+
+  home.username = "alex";
+  home.homeDirectory = "/home/alex";
 
   home.packages = with pkgs; [
     file
@@ -66,9 +57,6 @@
     uv
   ];
 
-  home.file = {
-  };
-
   home.sessionPath = [
     "${config.home.homeDirectory}/.local/bin"
     "${config.home.homeDirectory}/.cargo/bin"
@@ -84,18 +72,7 @@
     };
   };
 
-  xdg.configFile."clangd/config.yaml".text = ''
-    InlayHints:
-      Enabled: No
-
-    ---
-
-    If:
-      PathMatch: [.*\.h, .*\.hpp]
-
-    CompileFlags:
-      Add: [-Wno-unused-function, -Wno-unused-macros]
-    '';
+  xdg.configFile."clangd/config.yaml".source = ../packages/clangd/config.yaml;
 
   services.ssh-agent.enable = true;
 
@@ -222,7 +199,7 @@
 
     defaultEditor = true;
 
-    extraLuaConfig = lib.fileContents ./nvim.lua;
+    extraLuaConfig = lib.fileContents ../packages/neovim/config.lua;
 
     viAlias = true;
     vimAlias = true;
@@ -291,27 +268,14 @@
 
     delta = {
       enable = true;
-      options = {
-        navigate = true;
-      };
+      options.navigate = true;
     };
 
     extraConfig = {
-      pull = {
-        rebase = true;
-      };
-
-      rebase = {
-        updateRefs = true;
-      };
-
-      init = {
-        defaultBranch = "main";
-      };
-
-      submodule = {
-        recurse = true;
-      };
+      pull.rebase = true;
+      rebase.updateRefs = true;
+      init.defaultBranch = "main";
+      submodule.recurse = true;
     };
 
     ignores = [
@@ -351,6 +315,14 @@
     };
   };
 
-  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # This value determines the Home Manager release that your configuration is
+  # compatible with. This helps avoid breakage when a new Home Manager release
+  # introduces backwards incompatible changes.
+  #
+  # You should not change this value, even if you update Home Manager. If you do
+  # want to update the value, then make sure to first check the Home Manager
+  # release notes.
+  home.stateVersion = "25.05"; # Please read the comment before changing.
 }

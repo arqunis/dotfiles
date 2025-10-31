@@ -1,9 +1,9 @@
 {
-  description = "Home Manager configuration of alex";
+  description = "dotfiles NixOS configuration";
 
   inputs = {
-    # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,12 +17,19 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
+      nixosConfigurations."alex-pc" = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./nixos/configuration.nix
+        ];
+      };
+
       homeConfigurations."alex" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         extraSpecialArgs = { inherit inputs; };
 
-        modules = [ ./home.nix ];
+        modules = [ ./home-manager/home.nix ];
       };
     };
 }
