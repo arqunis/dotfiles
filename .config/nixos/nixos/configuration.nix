@@ -49,7 +49,7 @@
       ];
     };
 
-    extraHosts = lib.ifEnable (lib.pathExists ./hosts) lib.fileContents ./hosts;
+    extraHosts = lib.mkIf (lib.pathExists ./hosts) (lib.fileContents ./hosts);
   };
 
   programs.openvpn3.enable = true;
