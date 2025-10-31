@@ -18,6 +18,7 @@
     in
     {
       nixosConfigurations."alex-pc" = nixpkgs.lib.nixosSystem {
+        inherit system;
         specialArgs = { inherit inputs; };
         modules = [
           ./nixos/configuration.nix
