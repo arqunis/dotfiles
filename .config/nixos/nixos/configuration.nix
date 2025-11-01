@@ -92,22 +92,22 @@
 
   environment.gnome.excludePackages = (with pkgs; [
     cheese
+    decibels
     epiphany
     geary
-    decibels
-    seahorse
-    snapshot
-    simple-scan
-    gnome-music
+    gnome-calendar
     gnome-connections
+    gnome-contacts
+    gnome-initial-setup
+    gnome-maps
+    gnome-music
     gnome-photos
     gnome-tour
-    gnome-weather
     gnome-user-docs
-    gnome-contacts
-    gnome-calendar
-    gnome-maps
-    gnome-initial-setup
+    gnome-weather
+    seahorse
+    simple-scan
+    snapshot
     totem
     yelp
   ]);
