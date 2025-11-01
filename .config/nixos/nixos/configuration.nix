@@ -94,10 +94,22 @@
     cheese
     epiphany
     geary
+    decibels
+    seahorse
+    snapshot
+    simple-scan
     gnome-music
+    gnome-connections
     gnome-photos
     gnome-tour
+    gnome-weather
+    gnome-user-docs
+    gnome-contacts
+    gnome-calendar
+    gnome-maps
+    gnome-initial-setup
     totem
+    yelp
   ]);
 
   fonts.packages = with pkgs; [
