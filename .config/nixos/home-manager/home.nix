@@ -28,7 +28,6 @@
     fastfetch
 
     hledger
-    hledger-ui
     hledger-web
 
     syncthing
