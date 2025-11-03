@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   imports =
@@ -6,7 +6,14 @@
       ./hardware-configuration.nix
     ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix = {
+    package = pkgs.nix;
+    registry = {
+      self.flake = inputs.self;
+      nixpkgs.flake = inputs.nixpkgs;
+    };
+    settings.experimental-features = [ "nix-command" "flakes" ];
+  };
 
   nixpkgs.config.allowUnfree = true;
 
