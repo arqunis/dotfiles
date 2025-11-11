@@ -8,6 +8,9 @@
 
   nix = {
     package = pkgs.nix;
+
+    channel.enable = false;
+
     registry = {
       self.flake = inputs.self;
       nixpkgs.flake = inputs.nixpkgs;
