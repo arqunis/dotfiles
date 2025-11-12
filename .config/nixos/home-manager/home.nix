@@ -21,6 +21,8 @@
     htop
 
     nh
+    nixfmt
+    nixd
 
     ripgrep
     fd
