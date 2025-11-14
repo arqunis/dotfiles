@@ -8,29 +8,17 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs =
-    { nixpkgs, home-manager, ... } @ inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
-      nixosConfigurations."alex-pc" = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./nixos/configuration.nix
-        ];
-      };
+  outputs = { flake-parts, ... } @ inputs:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        ./nixos/hosts.nix # nixosConfigurations
+        ./home-manager/users.nix # homeConfigurations
+      ];
 
-      homeConfigurations."alex" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        extraSpecialArgs = { inherit inputs; };
-
-        modules = [ ./home-manager/home.nix ];
-      };
+      systems = ["x86_64-linux" "aarch64-linux" ];
     };
 }
