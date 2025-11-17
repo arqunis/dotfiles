@@ -45,21 +45,6 @@
 
   hardware.bluetooth.enable = false;
 
-  networking = {
-    hostName = "alex-pc";
-
-    firewall.enable = false;
-
-    networkmanager = {
-      enable = true;
-      plugins = with pkgs; [ networkmanager-openvpn ];
-    };
-
-    extraHosts = lib.mkIf (lib.pathExists ./hosts) (lib.fileContents ./hosts);
-  };
-
-  programs.openvpn3.enable = true;
-
   time.timeZone = "Europe/Bratislava";
 
   i18n.defaultLocale = "en_GB.UTF-8";

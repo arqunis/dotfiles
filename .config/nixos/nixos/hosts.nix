@@ -10,7 +10,11 @@ in {
         inherit self inputs;
       };
 
-      modules = [ ./configuration.nix ];
+      modules = [
+        { networking.hostName = "alex-pc"; }
+        ./modules/networking.nix
+        ./configuration.nix
+      ];
     };
   };
 }
