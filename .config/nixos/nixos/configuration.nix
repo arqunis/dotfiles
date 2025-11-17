@@ -160,6 +160,7 @@
     pavucontrol
     qbittorrent
     vscode
+    yaak
   ];
 
   programs.nix-ld.enable = true;
