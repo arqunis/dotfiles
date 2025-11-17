@@ -1,10 +1,7 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  imports = [ ./hardware-configuration.nix ];
 
   nix = {
     package = pkgs.nix;
@@ -55,9 +52,7 @@
 
     networkmanager = {
       enable = true;
-      plugins = with pkgs; [
-        networkmanager-openvpn
-      ];
+      plugins = with pkgs; [ networkmanager-openvpn ];
     };
 
     extraHosts = lib.mkIf (lib.pathExists ./hosts) (lib.fileContents ./hosts);
@@ -68,7 +63,7 @@
   time.timeZone = "Europe/Bratislava";
 
   i18n.defaultLocale = "en_GB.UTF-8";
-  i18n.extraLocales = ["sk_SK.UTF-8/UTF-8"];
+  i18n.extraLocales = [ "sk_SK.UTF-8/UTF-8" ];
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_GB.UTF-8";
     LC_IDENTIFICATION = "en_GB.UTF-8";

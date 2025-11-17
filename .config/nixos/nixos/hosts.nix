@@ -1,6 +1,5 @@
 { self, inputs, ... }:
-let
-  inherit (inputs) nixpkgs;
+let inherit (inputs) nixpkgs;
 in {
   flake.nixosConfigurations = {
     desktop = nixpkgs.lib.nixosSystem {
@@ -11,9 +10,7 @@ in {
         inherit self inputs;
       };
 
-      modules = [
-        ./configuration.nix
-      ];
+      modules = [ ./configuration.nix ];
     };
   };
 }
