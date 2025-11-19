@@ -13,6 +13,7 @@ in {
         ./modules/ssh.nix
         ./modules/bash.nix
         ./modules/zsh.nix
+        ./modules/neovim.nix
         ./home.nix
       ];
     };
