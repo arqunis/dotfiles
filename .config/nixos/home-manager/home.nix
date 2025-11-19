@@ -65,7 +65,6 @@
     "${config.home.homeDirectory}/.dotnet/tools"
   ];
 
-  programs.bash.enable = true;
 
   programs.zsh = let cacheHome = config.xdg.cacheHome;
   in {

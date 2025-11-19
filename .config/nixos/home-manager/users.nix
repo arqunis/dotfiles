@@ -7,8 +7,13 @@ in {
 
       extraSpecialArgs = { inherit self inputs; };
 
-      modules =
-        [ ./modules/xdg.nix ./modules/clangd.nix ./modules/ssh.nix ./home.nix ];
+      modules = [
+        ./modules/xdg.nix
+        ./modules/clangd.nix
+        ./modules/ssh.nix
+        ./modules/bash.nix
+        ./home.nix
+      ];
     };
   };
 }
