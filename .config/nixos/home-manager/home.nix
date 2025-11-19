@@ -65,11 +65,6 @@
     "${config.home.homeDirectory}/.dotnet/tools"
   ];
 
-
-
-
-
-
   programs.home-manager.enable = true;
 
   # This value determines the Home Manager release that your configuration is
