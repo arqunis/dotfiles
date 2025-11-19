@@ -14,6 +14,7 @@ in {
         ./modules/bash.nix
         ./modules/zsh.nix
         ./modules/neovim.nix
+        ./modules/git.nix
         ./home.nix
       ];
     };
