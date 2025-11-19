@@ -65,8 +65,6 @@
     "${config.home.homeDirectory}/.dotnet/tools"
   ];
 
-  services.ssh-agent.enable = true;
-
   programs.bash.enable = true;
 
   programs.zsh = let cacheHome = config.xdg.cacheHome;
