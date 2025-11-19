@@ -65,15 +65,6 @@
     "${config.home.homeDirectory}/.dotnet/tools"
   ];
 
-  xdg = {
-    enable = true;
-
-    userDirs = {
-      enable = true;
-      createDirectories = true;
-    };
-  };
-
   xdg.configFile."clangd/config.yaml".source = ../packages/clangd/config.yaml;
 
   services.ssh-agent.enable = true;
