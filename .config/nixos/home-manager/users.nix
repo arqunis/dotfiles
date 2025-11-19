@@ -7,7 +7,7 @@ in {
 
       extraSpecialArgs = { inherit self inputs; };
 
-      modules = [ ./modules/xdg.nix ./home.nix ];
+      modules = [ ./modules/xdg.nix ./modules/clangd.nix ./home.nix ];
     };
   };
 }

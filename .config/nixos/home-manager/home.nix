@@ -65,8 +65,6 @@
     "${config.home.homeDirectory}/.dotnet/tools"
   ];
 
-  xdg.configFile."clangd/config.yaml".source = ../packages/clangd/config.yaml;
-
   services.ssh-agent.enable = true;
 
   programs.bash.enable = true;
