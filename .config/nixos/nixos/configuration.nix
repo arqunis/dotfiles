@@ -129,6 +129,7 @@
     vscode
     yaak
 
+    gimp3
     inkscape
 
     krita
