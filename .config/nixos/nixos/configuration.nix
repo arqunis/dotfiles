@@ -129,6 +129,8 @@
     vscode
     yaak
 
+    inkscape
+
     krita
     kdePackages.kdenlive
   ];
