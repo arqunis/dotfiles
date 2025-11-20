@@ -1,6 +1,8 @@
 { self, inputs, ... }:
-let inherit (inputs) nixpkgs;
-in {
+let
+  inherit (inputs) nixpkgs;
+in
+{
   flake.nixosConfigurations = {
     desktop = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";

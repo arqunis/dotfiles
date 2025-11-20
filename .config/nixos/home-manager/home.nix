@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   nix = {
@@ -8,7 +13,10 @@
       nixpkgs.flake = inputs.nixpkgs;
     };
     nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-    settings.experimental-features = [ "nix-command" "flakes" ];
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
   };
 
   home.username = "alex";

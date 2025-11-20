@@ -1,4 +1,10 @@
-{ config, pkgs, lib, inputs, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
 
 {
   imports = [ ./hardware-configuration.nix ];
@@ -13,7 +19,10 @@
       nixpkgs.flake = inputs.nixpkgs;
     };
     nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-    settings.experimental-features = [ "nix-command" "flakes" ];
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -26,7 +35,11 @@
   users.users.alex = {
     isNormalUser = true;
     description = "Alex";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+    ];
     shell = pkgs.zsh;
   };
 

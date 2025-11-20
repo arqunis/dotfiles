@@ -1,6 +1,8 @@
 { self, inputs, ... }:
-let inherit (inputs) nixpkgs home-manager;
-in {
+let
+  inherit (inputs) nixpkgs home-manager;
+in
+{
   flake.homeConfigurations = {
     desktop = home-manager.lib.homeManagerConfiguration {
       pkgs = import nixpkgs { system = "x86_64-linux"; };
