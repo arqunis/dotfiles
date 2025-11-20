@@ -131,6 +131,7 @@
 
     gimp3
     inkscape
+    handbrake
 
     krita
     kdePackages.kdenlive
