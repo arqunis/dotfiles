@@ -134,6 +134,14 @@
   programs.firefox.enable = true;
   programs.localsend.enable = true;
 
+  programs.steam = {
+    enable = true;
+
+    extraCompatPackages = with pkgs; [
+      proton-ge-bin
+    ];
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
