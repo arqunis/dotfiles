@@ -130,6 +130,7 @@
     yaak
 
     krita
+    kdePackages.kdenlive
   ];
 
   programs.nix-ld.enable = true;
