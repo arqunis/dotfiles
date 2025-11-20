@@ -16,7 +16,6 @@ in {
         ./modules/neovim.nix
         ./modules/git.nix
         ./modules/direnv.nix
-        ./modules/gtk.nix
         ./home.nix
       ];
     };
