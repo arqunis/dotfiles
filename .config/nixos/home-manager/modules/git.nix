@@ -3,15 +3,9 @@
   programs.git = {
     enable = true;
 
-    userEmail = "acdenissk69@gmail.com";
-    userName = "Alex M. M.";
-
-    delta = {
-      enable = true;
-      options.navigate = true;
-    };
-
-    extraConfig = {
+    settings = {
+      user.email = [ "acdenissk69@gmail.com" ];
+      user.name = "Alex M. M.";
       pull.rebase = true;
       rebase.updateRefs = true;
       init.defaultBranch = "main";
@@ -29,6 +23,11 @@
       ".buildconfig"
       "compile_commands.json"
     ];
+  };
+
+  programs.delta = {
+    enable = true;
+    options.navigate = true;
   };
 
 }

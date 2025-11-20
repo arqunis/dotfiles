@@ -106,7 +106,7 @@
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     roboto
     ttf_bitstream_vera
     hack-font

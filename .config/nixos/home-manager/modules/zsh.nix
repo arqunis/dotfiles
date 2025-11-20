@@ -4,8 +4,7 @@
   in {
     enable = true;
 
-    # FIXME: Change to `${config.xdg.configHome}/zsh` once Home Manager is upgraded to 25.11
-    dotDir = ".config/zsh";
+    dotDir = "${config.xdg.configHome}/zsh";
 
     defaultKeymap = "emacs";
 
