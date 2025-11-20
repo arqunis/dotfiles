@@ -13,6 +13,8 @@ in {
       modules = [
         { networking.hostName = "alex-pc"; }
         ./modules/networking.nix
+        ./modules/graphics.nix
+        { hardware.isGpuAMD = true; }
         ./configuration.nix
       ];
     };

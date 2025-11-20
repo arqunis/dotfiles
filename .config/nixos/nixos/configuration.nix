@@ -68,40 +68,16 @@
   services.flatpak.enable = true;
 
   services.libinput.enable = true;
-  services.xserver = {
-    enable = true;
-    xkb = {
-      layout = "us";
-      variant = "";
-    };
 
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
-  };
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
-  services.gnome.gnome-browser-connector.enable = true;
-
-  environment.gnome.excludePackages = (with pkgs; [
-    cheese
-    decibels
-    epiphany
-    geary
-    gnome-calendar
-    gnome-connections
-    gnome-contacts
-    gnome-initial-setup
-    gnome-maps
-    gnome-music
-    gnome-photos
-    gnome-tour
-    gnome-user-docs
-    gnome-weather
-    seahorse
-    simple-scan
-    snapshot
-    totem
-    yelp
-  ]);
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    plasma-browser-integration
+    elisa
+    krdp
+  ];
 
   fonts.packages = with pkgs; [
     noto-fonts
@@ -123,10 +99,6 @@
     pulse.enable = true;
   };
 
-  qt.enable = true;
-  qt.platformTheme = "gtk2";
-  qt.style = "gtk2";
-
   environment.systemPackages = with pkgs; [
     file
     tree
@@ -142,22 +114,17 @@
 
     nano
 
-    gnome-tweaks
-    dconf-editor
-    ptyxis
-    eog
-
     keepassxc
 
     xclip
     xsel
     wl-clipboard
 
-    qalculate-gtk
+    qalculate-qt
     mpv
     vlc
     obs-studio
-    pavucontrol
+    lxqt.pavucontrol-qt
     qbittorrent
     vscode
     yaak
