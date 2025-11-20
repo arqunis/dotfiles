@@ -128,6 +128,8 @@
     qbittorrent
     vscode
     yaak
+
+    krita
   ];
 
   programs.nix-ld.enable = true;
