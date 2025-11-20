@@ -143,6 +143,7 @@
 
   programs.nix-ld.enable = true;
   programs.firefox.enable = true;
+  programs.thunderbird.enable = true;
   programs.localsend.enable = true;
 
   programs.steam = {
