@@ -137,6 +137,8 @@
 
     krita
     kdePackages.kdenlive
+
+    google-chrome
   ];
 
   programs.nix-ld.enable = true;
