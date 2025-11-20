@@ -133,6 +133,8 @@
     inkscape
     handbrake
 
+    libreoffice-qt-fresh
+
     krita
     kdePackages.kdenlive
   ];
