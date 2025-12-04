@@ -28,7 +28,7 @@
     time
     htop
 
-    nh
+    nix-search
     nixfmt
     nixd
 
