@@ -1,1 +1,4 @@
 README.md
+
+.config/nixos/**/hardware-configuration.nix
+.config/nixos/system/hosts/alex/hosts
