@@ -1,4 +1,5 @@
 README.md
+LICENSE-BSD_0.txt
 
 .config/nixos/**/hardware-configuration.nix
 .config/nixos/system/hosts/alex/hosts
