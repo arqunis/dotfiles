@@ -35,7 +35,6 @@
       shellAliases = {
         ls = "ls --color=auto";
         wget = ''wget --hsts-file="${config.xdg.dataHome}/wget-hsts"'';
-        config = "git --git-dir=$HOME/dotfiles --work-tree=$HOME";
       };
 
       envExtra = ''
