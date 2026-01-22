@@ -149,6 +149,8 @@
     krita
     kdePackages.kdenlive
 
+    smartmontools
+
     google-chrome
 
     lutris
@@ -158,6 +160,8 @@
   programs.firefox.enable = true;
   programs.thunderbird.enable = true;
   programs.localsend.enable = true;
+
+  programs.partition-manager.enable = true;
 
   programs.steam = {
     enable = true;
