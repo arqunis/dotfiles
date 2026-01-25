@@ -148,6 +148,7 @@
 
     krita
     kdePackages.kdenlive
+    kdePackages.filelight
 
     smartmontools
 
