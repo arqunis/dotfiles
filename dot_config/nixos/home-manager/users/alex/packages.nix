@@ -19,8 +19,8 @@
 
     chezmoi
 
-    hledger
-    hledger-web
+    beancount
+    fava
 
     syncthing
 
