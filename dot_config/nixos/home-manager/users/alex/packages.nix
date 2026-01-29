@@ -19,8 +19,6 @@
 
     chezmoi
 
-    zed-editor
-
     hledger
     hledger-web
 
