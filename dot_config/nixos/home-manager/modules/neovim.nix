@@ -6,7 +6,7 @@
 
     defaultEditor = true;
 
-    extraLuaConfig = lib.fileContents ../../packages/neovim/config.lua;
+    initLua = lib.fileContents ../../packages/neovim/config.lua;
 
     viAlias = true;
     vimAlias = true;
