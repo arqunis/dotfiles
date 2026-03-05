@@ -153,8 +153,6 @@
     smartmontools
 
     google-chrome
-
-    lutris
   ];
 
   programs.nix-ld.enable = true;
