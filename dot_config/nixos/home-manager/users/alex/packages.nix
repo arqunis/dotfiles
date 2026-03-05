@@ -21,27 +21,8 @@
 
     syncthing
 
-    # C, C++
-    gccStdenv
-    clangStdenv
-    pkg-config
-    cmake
-    ninja
-    clang
     clang-tools
 
-    # Go
-    go
-
-    # Rust
     rustup
-
-    # JS/TS
-    nodejs
-    pnpm
-    oxlint
-
-    # Python
-    uv
   ];
 }
