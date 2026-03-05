@@ -19,9 +19,6 @@
 
     chezmoi
 
-    beancount
-    fava
-
     syncthing
 
     # C, C++
