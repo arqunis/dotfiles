@@ -153,6 +153,8 @@
     smartmontools
 
     google-chrome
+
+    emacs-pgtk
   ];
 
   programs.nix-ld.enable = true;
