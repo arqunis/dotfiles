@@ -11,12 +11,6 @@
 ;; Set the GUI font to the mononoki font, or whatever the monospace font is.
 (add-to-list 'default-frame-alist `(font . ,(if (alex/font-exists-p "mononoki") "mononoki-12" "monospace-12")))
 
-;; Use Catppuccin's Macchiato theme.
-(use-package catppuccin-theme
-  :ensure t
-  :custom (catppuccin-flavor 'macchiato)
-  :config (load-theme 'catppuccin t))
-
 ;; Show emoji images when their Unicode data is present in a file.
 (use-package emojify
   :ensure t

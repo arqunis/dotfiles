@@ -74,6 +74,7 @@
 (load (expand-file-name "alex/keybindings.el" user-emacs-directory))
 (load (expand-file-name "alex/elpaca.el" user-emacs-directory))
 (load (expand-file-name "alex/modeline.el" user-emacs-directory))
+(load (expand-file-name "alex/theme.el" user-emacs-directory))
 
 (when (display-graphic-p)
   (load (expand-file-name "alex/gui.el" user-emacs-directory)))
