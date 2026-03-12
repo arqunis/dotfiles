@@ -66,7 +66,7 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Enable absolute line numbers only in `prog-mode` buffers.
-(add-hook 'prog-mode-hook (lambda () (display-line-numbers-mode)))
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
 
 ;; Allow saving variables across Emacs instances.
 (savehist-mode)
