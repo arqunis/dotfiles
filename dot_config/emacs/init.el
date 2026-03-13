@@ -160,18 +160,13 @@
   :ensure t
   :init (editorconfig-mode 1))
 
-;; Use tree-sitter for accurate syntax highlighting.
-;; Emacs 29 integrates tree-sitter natively. Only use the external
-;; package when running an older emacs.
-(unless (>= emacs-major-version 29)
-  (use-package tree-sitter
-    :ensure t
-    :init
-    (global-tree-sitter-mode))
-
-  (use-package tree-sitter-langs
-    :ensure t
-    :hook (tree-sitter-after-on . tree-sitter-hl-mode)))
+(use-package treesit-auto
+  :ensure t
+  :custom
+  (treesit-auto-install 'prompt)
+  :config
+  (treesit-auto-add-to-auto-mode-alist 'all)
+  (global-treesit-auto-mode))
 
 ;; Use Corfu for text completion in buffers.
 (use-package corfu
