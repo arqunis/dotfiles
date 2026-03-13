@@ -133,6 +133,14 @@
   :init
   (savehist-mode))
 
+(use-package emacs
+  :custom
+  (context-menu-mode t)
+  (enable-recursive-minibuffers t)
+  (read-extended-command-predicate #'command-completion-default-include-p)
+  (minibuffer-prompt-properties
+   '(read-only t cursor-intangible t face minibuffer-prompt)))
+
 (use-package marginalia
   :ensure t
   :after vertico
