@@ -64,13 +64,7 @@
 ;; Enable absolute line numbers only in `prog-mode` buffers.
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 
-(load (expand-file-name "alex/keybindings.el" user-emacs-directory))
 (load (expand-file-name "alex/elpaca.el" user-emacs-directory))
-(load (expand-file-name "alex/modeline.el" user-emacs-directory))
-(load (expand-file-name "alex/theme.el" user-emacs-directory))
-
-(when (display-graphic-p)
-  (load (expand-file-name "alex/gui.el" user-emacs-directory)))
 
 (use-package use-package
   :custom
@@ -78,6 +72,13 @@
 
 (use-package no-littering
   :ensure t)
+
+(load (expand-file-name "alex/keybindings.el" user-emacs-directory))
+(load (expand-file-name "alex/modeline.el" user-emacs-directory))
+(load (expand-file-name "alex/theme.el" user-emacs-directory))
+
+(when (display-graphic-p)
+  (load (expand-file-name "alex/gui.el" user-emacs-directory)))
 
 ;; Emulate Vim keybindings.
 (when (< emacs-major-version 28)
@@ -101,8 +102,6 @@
   :ensure t
   :custom
   (dashboard-items '((recents . 15)))
-  (dashboard-set-file-icons nil)
-  (dashboard-set-heading-icons nil)
   :init
   (dashboard-setup-startup-hook))
 

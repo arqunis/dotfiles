@@ -7,7 +7,6 @@
 ;; Use DOOM Emacs' modeline.
 (use-package doom-modeline
   :ensure t
-  :custom (doom-modeline-icon nil)
   :init (doom-modeline-mode 1))
 
 ;;; modeline.el ends here

@@ -16,4 +16,7 @@
   :ensure t
   :init (global-emojify-mode 1))
 
+(use-package all-the-icons
+  :ensure t)
+
 ;;; gui.el ends here
