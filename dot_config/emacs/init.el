@@ -96,7 +96,10 @@
   (evil-search-module 'evil-search)
   :init
   (evil-mode 1)
-  (add-to-list 'evil-emacs-state-modes 'dired-mode))
+  (add-to-list 'evil-emacs-state-modes 'dired-mode)
+  :config
+  (evil-set-initial-state 'messages-buffer-mode 'normal)
+  (evil-set-initial-state 'dashboard-mode 'normal))
 
 (use-package dashboard
   :ensure t
