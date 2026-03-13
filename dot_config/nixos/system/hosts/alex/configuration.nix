@@ -90,16 +90,23 @@
     krdp
   ];
 
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-color-emoji
-    roboto
-    ttf_bitstream_vera
-    hack-font
-    dejavu_fonts
-    liberation_ttf
-  ];
+  fonts = {
+    packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk-sans
+      roboto
+      ttf_bitstream_vera
+      mononoki
+    ];
+
+    enableDefaultPackages = true;
+
+    fontconfig.defaultFonts = {
+      serif = [ "Noto Serif" ];
+      sansSerif = [ "Noto Sans" ];
+      monospace = [ "mononoki" ];
+    };
+  };
 
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
