@@ -64,9 +64,6 @@
 ;; Enable absolute line numbers only in `prog-mode` buffers.
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 
-;; Allow saving variables across Emacs instances.
-(savehist-mode)
-
 (load (expand-file-name "alex/keybindings.el" user-emacs-directory))
 (load (expand-file-name "alex/elpaca.el" user-emacs-directory))
 (load (expand-file-name "alex/modeline.el" user-emacs-directory))
@@ -129,12 +126,17 @@
 (use-package vertico
   :ensure t
   :custom (vertico-cycle t)
-  :config (vertico-mode 1))
+  :init (vertico-mode 1))
+
+;; Allow saving variables across Emacs instances.
+(use-package savehist
+  :init
+  (savehist-mode))
 
 (use-package marginalia
   :ensure t
   :after vertico
-  :config (marginalia-mode 1))
+  :init (marginalia-mode 1))
 
 ;; Add EditorConfig support.
 (use-package editorconfig
