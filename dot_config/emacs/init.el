@@ -10,10 +10,6 @@
       native-comp-async-report-warnings-errors nil
       load-prefer-newer t)
 
-;; Disable backup files.
-(setq make-backup-files nil
-      auto-save-default nil)
-
 ;; Allow specifying =y= or =n= for confirmation/aborting.
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -82,6 +78,9 @@
 (use-package use-package
   :custom
   (use-package-compute-statistics t))
+
+(use-package no-littering
+  :ensure t)
 
 ;; Emulate Vim keybindings.
 (when (< emacs-major-version 28)
