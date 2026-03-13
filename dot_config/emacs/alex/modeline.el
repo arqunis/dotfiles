@@ -8,6 +8,6 @@
 (use-package doom-modeline
   :ensure t
   :custom (doom-modeline-icon nil)
-  :config (doom-modeline-mode 1))
+  :init (doom-modeline-mode 1))
 
 ;;; modeline.el ends here

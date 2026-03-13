@@ -14,6 +14,6 @@
 ;; Show emoji images when their Unicode data is present in a file.
 (use-package emojify
   :ensure t
-  :config (global-emojify-mode 1))
+  :init (global-emojify-mode 1))
 
 ;;; gui.el ends here

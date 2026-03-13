@@ -86,32 +86,32 @@
 
 (use-package evil
   :ensure t
-  :config
-  (evil-mode 1)
-  (add-to-list 'evil-emacs-state-modes 'dired-mode)
   :custom
   (evil-want-integration t)
   (evil-want-keybinding nil)
   (evil-want-C-u-scroll t)
   (evil-want-C-i-jump nil)
   (evil-undo-system (if (< emacs-major-version 28) 'undo-fu 'undo-redo))
-  (evil-search-module 'evil-search))
+  (evil-search-module 'evil-search)
+  :init
+  (evil-mode 1)
+  (add-to-list 'evil-emacs-state-modes 'dired-mode))
 
 (use-package dashboard
   :ensure t
-  :config
-  (dashboard-setup-startup-hook)
   :custom
   (dashboard-items '((recents . 15)))
   (dashboard-set-file-icons nil)
-  (dashboard-set-heading-icons nil))
+  (dashboard-set-heading-icons nil)
+  :init
+  (dashboard-setup-startup-hook))
 
 ;; Show a prompt when leaving a keybinding unfinished to display which
 ;; options are available.
 (use-package which-key
   :ensure t
   :custom (which-key-idle-delay 1)
-  :config (which-key-mode 1))
+  :init (which-key-mode 1))
 
 ;; Enhance text navigation.
 (use-package expand-region
@@ -156,7 +156,7 @@
 ;; Add EditorConfig support.
 (use-package editorconfig
   :ensure t
-  :config (editorconfig-mode 1))
+  :init (editorconfig-mode 1))
 
 ;; Use tree-sitter for accurate syntax highlighting.
 ;; Emacs 29 integrates tree-sitter natively. Only use the external
@@ -164,7 +164,7 @@
 (unless (>= emacs-major-version 29)
   (use-package tree-sitter
     :ensure t
-    :config
+    :init
     (global-tree-sitter-mode))
 
   (use-package tree-sitter-langs
@@ -192,19 +192,18 @@
   (corfu-mode . corfu-history-mode)
   :init
   (add-to-list 'savehist-additional-variables 'corfu-history)
-  :config
   (global-corfu-mode))
 
 (use-package kind-icon
   :ensure t
   :after corfu
   :custom (kind-icon-default-face 'corfu-default)
-  :config (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
+  :init (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
 
 (use-package corfu-terminal
   :ensure (:repo "https://codeberg.org/akib/emacs-corfu-terminal.git")
   :unless (display-graphic-p)
   :after corfu
-  :config (corfu-terminal-mode +1))
+  :init (corfu-terminal-mode +1))
 
 ;;; init.el ends here
