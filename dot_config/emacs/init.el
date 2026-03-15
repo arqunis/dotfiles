@@ -41,10 +41,10 @@
 (setq next-line-add-newlines nil)
 
 ;; Indent only with spaces.
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 
 ;; Define the width of a "tab" as 4 characters.
-(setq tab-width 4)
+(setq-default tab-width 4)
 
 ;; Indent and complete text with the TAB key.
 (setq tab-always-indent 'complete)
