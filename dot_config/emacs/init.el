@@ -183,6 +183,12 @@
   :custom (which-key-idle-delay 1)
   :init (which-key-mode 1))
 
+(use-package indent-bars
+  :ensure t
+  :custom
+  (indent-bars-prefer-character t)
+  :hook (prog-mode . indent-bars-mode))
+
 ;; Enhance text navigation.
 (use-package expand-region
   :ensure t
