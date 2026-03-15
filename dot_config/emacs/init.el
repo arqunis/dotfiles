@@ -43,20 +43,73 @@
 ;; Indent only with spaces.
 (setq-default indent-tabs-mode nil)
 
-;; Define the width of a "tab" as 4 characters.
-(setq-default tab-width 4)
-
 ;; Indent and complete text with the TAB key.
 (setq tab-always-indent 'complete)
 
 ;; Show a maximum of 3 items when asking to complete text.
 (setq completion-cycle-threshold 3)
 
-;; Use Java-style braces by default in =c-mode= buffers.
-(setq c-default-style "java")
+;; Use Allman-style braces by default in =c-mode= and =c++-mode= buffers, and
+;; Java-style braces in others.
+(setq-default c-default-style
+      '((c-mode . "bsd")
+        (c++-mode . "bsd")
+        (other . "java")))
 
-;; Define indentation size as 4 characters in =c-mode= buffers.
-(setq c-basic-offset 4)
+(setq-default c-ts-mode-indent-style 'bsd)
+
+;; Define the tab width and indentation width as 4 characters.
+(setq-default tab-width 4)
+
+(setq-default
+ c-basic-offset tab-width
+ js-indent-level tab-width
+ js2-basic-offset tab-width
+ js3-indent-level tab-width
+ lua-indent-level tab-width
+ perl-indent-level tab-width
+ cperl-indent-level tab-width
+ raku-indent-offset tab-width
+ erlang-indent-level tab-width
+ ada-indent tab-width
+ sgml-basic-offset tab-width
+ nxml-child-indent tab-width
+ web-mode-markup-indent-offset tab-width
+ web-mode-code-indent-offset tab-width
+ web-mode-sql-indent-offset tab-width
+ web-mode-css-indent-offset tab-width
+ pascal-indent-level tab-width
+ typescript-indent-level tab-width
+ plantuml-indent-level tab-width
+ pug-tab-width tab-width
+ cmake-tab-width tab-width
+ xquery-mode-indent-width tab-width
+ vhdl-basic-offset tab-width
+ groovy-indent-offset tab-width
+ yaml-indent-offset tab-width
+ swift-mode:basic-offset tab-width
+ sh-basic-offset tab-width
+ sh-basic-offset tab-width
+ ruby-indent-level tab-width
+ enh-ruby-indent-level tab-width
+ crystal-indent-level tab-width
+ css-indent-offset tab-width
+ rust-indent-offset tab-width
+ rustic-indent-offset tab-width
+ scala-indent:step tab-width
+ ada-ts-mode-indent-offset tab-width
+ c-ts-mode-indent-offset tab-width
+ c-ts-mode-indent-offset tab-width
+ go-ts-mode-indent-offset tab-width
+ gpr-ts-mode-indent-offset tab-width
+ java-ts-mode-indent-offset tab-width
+ rust-ts-mode-indent-offset tab-width
+ js-indent-level tab-width
+ json-ts-mode-indent-offset tab-width
+ cmake-ts-mode-indent-offset tab-width
+ typescript-ts-mode-indent-offset tab-width
+ ursa-ts-mode-indent-offset tab-width
+ standard-indent tab-width)
 
 ;; Remove trailing whitespace when saving a buffer.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
