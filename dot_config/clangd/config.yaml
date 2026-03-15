@@ -8,3 +8,4 @@ If:
 
 CompileFlags:
   Add: [-Wno-unused-function, -Wno-unused-macros]
+

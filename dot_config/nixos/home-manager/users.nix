@@ -11,7 +11,6 @@ in
 
       modules = [
         ./modules/xdg.nix
-        ./modules/clangd.nix
         ./modules/ssh.nix
         ./modules/bash.nix
         ./modules/zsh.nix
