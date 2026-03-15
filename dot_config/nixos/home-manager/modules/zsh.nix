@@ -41,6 +41,10 @@
         if [[ -f "$HOME/.custom/source.sh" ]]; then
             source "$HOME/.custom/source.sh"
         fi
+
+        if [[ -f "$HOME/.vite-plus/env" ]]; then
+            source "$HOME/.vite-plus/env"
+        fi
       '';
 
       initContent =
