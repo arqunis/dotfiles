@@ -101,6 +101,21 @@
   (evil-set-initial-state 'messages-buffer-mode 'normal)
   (evil-set-initial-state 'dashboard-mode 'normal))
 
+(use-package move-text
+  :ensure t
+  :bind (("M-<up>" . move-text-up)
+         ("M-<down>" . move-text-down)))
+
+(defun indent-region-advice (&rest ignored)
+  (let ((deactivate deactivate-mark))
+    (if (region-active-p)
+        (indent-region (region-beginning) (region-end))
+      (indent-region (line-beginning-position) (line-end-position)))
+    (setq deactivate-mark deactivate)))
+
+(advice-add 'move-text-up :after 'indent-region-advice)
+(advice-add 'move-text-down :after 'indent-region-advice)
+
 (use-package dashboard
   :ensure t
   :custom
