@@ -23,6 +23,11 @@
 
     clang-tools
 
+    # Rust
     rustup
+
+    # Node/JS
+    pnpm
+    nodejs.out
   ];
 }
