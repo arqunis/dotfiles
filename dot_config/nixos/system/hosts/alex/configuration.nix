@@ -156,6 +156,7 @@
     krita
     kdePackages.kdenlive
     kdePackages.filelight
+    kdePackages.kcolorchooser
 
     smartmontools
 
