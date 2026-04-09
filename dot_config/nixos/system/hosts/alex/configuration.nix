@@ -145,16 +145,7 @@
     lxqt.pavucontrol-qt
     qbittorrent
     vscode
-    yaak
 
-    gimp3
-    inkscape
-    handbrake
-
-    libreoffice-qt-fresh
-
-    krita
-    kdePackages.kdenlive
     kdePackages.filelight
     kdePackages.kcolorchooser
 
