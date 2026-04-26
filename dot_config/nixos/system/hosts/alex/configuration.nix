@@ -133,6 +133,8 @@
 
     micro
 
+    graphviz
+
     keepassxc
 
     xclip
