@@ -129,8 +129,6 @@
       };
 
       environment.systemPackages = with pkgs; [
-        nix-sweep
-
         file
         tree
         time

@@ -42,6 +42,7 @@
         time
         htop
 
+        nix-sweep
         nix-search
         nixfmt
         nixd
