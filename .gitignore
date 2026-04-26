@@ -1,0 +1,2 @@
+hardware-configuration.nix
+dot_config/nixos/modules/hosts/desktop/hosts
