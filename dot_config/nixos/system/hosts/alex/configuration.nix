@@ -141,7 +141,6 @@
     mpv
     vlc
     obs-studio
-    lxqt.pavucontrol-qt
     qbittorrent
     vscode
 
