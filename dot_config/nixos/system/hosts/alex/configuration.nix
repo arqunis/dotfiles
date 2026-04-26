@@ -130,7 +130,7 @@
     unrar
     p7zip
 
-    nano
+    micro
 
     keepassxc
 
