@@ -139,7 +139,6 @@
 
     qalculate-qt
     mpv
-    vlc
     obs-studio
     qbittorrent
     vscode
