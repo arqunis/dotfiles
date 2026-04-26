@@ -151,13 +151,24 @@
 
     smartmontools
 
-    google-chrome
+    brave
   ];
 
   programs.nix-ld.enable = true;
   programs.firefox.enable = true;
   programs.thunderbird.enable = true;
   programs.localsend.enable = true;
+
+  programs.chromium = {
+    enable = true;
+    enablePlasmaBrowserIntegration = true;
+    extensions = [
+      "agadcopafaojndinhloilcanpfpbonbk" # YouTube Volume Scroll
+      "cngoemokfjekjkmajenlaokhnmmiinca" # wiki.gg Redirect
+      "fkagelmloambgokoeokbpihmgpkbgbfm" # Indie Wiki Buddy
+      "nhdogjmejiglipccpnnnanhbledajbpd" # Vue.js devtools
+    ];
+  };
 
   programs.partition-manager.enable = true;
 
