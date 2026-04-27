@@ -27,18 +27,6 @@
             init.defaultBranch = "main";
             submodule.recurse = true;
           };
-
-          ignores = [
-            ".vscode/"
-            "build/"
-            ".ccls-cache/"
-            ".cache/"
-            ".clangd/"
-            "zig-cache/"
-            "zig-out/"
-            ".buildconfig"
-            "compile_commands.json"
-          ];
         };
 
         programs.delta = {
