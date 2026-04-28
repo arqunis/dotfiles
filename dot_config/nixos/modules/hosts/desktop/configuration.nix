@@ -8,7 +8,13 @@
         self.nixosModules.networking
         self.nixosModules.graphics
         self.nixosModules.desktopHardware
+
+        inputs.home-manager.nixosModules.home-manager
       ];
+
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
+      home-manager.users.alex = self.homeModules.alex;
 
       nix = {
         package = pkgs.nix;
