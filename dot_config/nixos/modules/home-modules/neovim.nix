@@ -2,7 +2,7 @@
 {
 
   flake.homeModules.neovim =
-    { ... }:
+    { lib, ... }:
     {
 
       programs.neovim = {
@@ -16,6 +16,8 @@
 
         withRuby = false;
         withPython3 = false;
+
+        initLua = lib.readFile ./neovim/init.lua;
       };
     };
 }
