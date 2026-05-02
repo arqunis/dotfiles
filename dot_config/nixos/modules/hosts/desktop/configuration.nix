@@ -163,8 +163,18 @@
         qbittorrent
         vscode
 
+        libreoffice
+        gimp
+        inkscape
+        handbrake
+
+        krita
+
         kdePackages.filelight
         kdePackages.kcolorchooser
+        kdePackages.kdenlive
+
+        mmex
 
         smartmontools
 
