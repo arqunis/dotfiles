@@ -19,6 +19,7 @@
         self.homeModules.git
         self.homeModules.direnv
         self.homeModules.neovim
+        self.homeModules.zed
       ];
 
       git.name = "Alex M. M.";
@@ -45,8 +46,6 @@
 
         nix-sweep
         nix-search
-        nixfmt
-        nixd
 
         ripgrep
         fd

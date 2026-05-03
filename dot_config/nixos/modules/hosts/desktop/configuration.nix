@@ -161,7 +161,6 @@
         mpv
         obs-studio
         qbittorrent
-        zed-editor
         vscode
 
         libreoffice
