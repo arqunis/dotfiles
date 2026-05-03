@@ -13,6 +13,7 @@
       imports = [
         self.homeModules.nix
         self.homeModules.xdg
+        self.homeModules.clangd
         self.homeModules.bash
         self.homeModules.zsh
         self.homeModules.git
