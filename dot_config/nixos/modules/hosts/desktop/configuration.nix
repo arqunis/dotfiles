@@ -161,7 +161,6 @@
         mpv
         obs-studio
         qbittorrent
-        vscode
 
         libreoffice
         gimp
