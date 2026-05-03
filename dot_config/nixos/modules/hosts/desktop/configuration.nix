@@ -162,7 +162,7 @@
         obs-studio
         qbittorrent
 
-        libreoffice
+        libreoffice-qt
         gimp
         inkscape
         handbrake
