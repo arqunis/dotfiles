@@ -4,16 +4,18 @@
   withSystem,
   ...
 }:
+let
+  system = "x86_64-linux";
+in
 {
-  flake.homeConfigurations.alex = inputs.home-manager.lib.homeManagerConfiguration {
-    modules = [
-      self.homeModules.alex
-      (
-        { config, ... }:
-        {
-          pkgs = withSystem config.nixpkgs.hostPlatform.system ({ pkgs, ... }: pkgs);
-        }
-      )
-    ];
-  };
+  flake.homeConfigurations.alex = withSystem system (
+    { pkgs, ... }:
+    inputs.home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+
+      modules = [
+        self.homeModules.alex
+      ];
+    }
+  );
 }
