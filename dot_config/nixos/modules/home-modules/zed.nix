@@ -92,6 +92,7 @@
           "dockerfile"
           "dracula"
           "editorconfig"
+          "emmet"
           "env"
           "git-firefly"
           "github-actions"
