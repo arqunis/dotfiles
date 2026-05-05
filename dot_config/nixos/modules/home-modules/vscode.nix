@@ -14,6 +14,12 @@
           enableUpdateCheck = false;
 
           userSettings = {
+            "chat.agent.enabled" = false;
+            "chat.autopilot.enabled" = false;
+            "chat.disableAIFeatures" = true;
+            "git.addAICoAuthor" = "off";
+            "telemetry.feedback.enabled" = false;
+            "telemetry.telemetryLevel" = "off";
             "workbench.colorTheme" = "Dracula Theme";
             "workbench.iconTheme" = "vscode-icons";
             "vsicons.dontShowNewVersionMessage" = true;
