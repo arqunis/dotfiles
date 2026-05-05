@@ -7,6 +7,8 @@
         enable = true;
         package = pkgs.vscodium-fhs;
 
+        mutableExtensionsDir = true;
+
         profiles.default = {
           enableExtensionUpdateCheck = false;
           enableUpdateCheck = false;
@@ -46,30 +48,38 @@
             }
           ];
 
-          extensions = pkgs.nix4vscode.forOpenVsx [
-            "dracula-theme.theme-dracula"
-            "vscode-icons-team.vscode-icons"
-            "editorconfig.editorconfig"
-            "usernamehw.errorlens"
-            "vscodevim.vim"
-            "redhat.vscode-yaml"
-            "redhat.vscode-xml"
-            "mechatroner.rainbow-csv"
-            "codezombiech.gitignore"
-            "ultram4rine.vscode-choosealicense"
-            "jnoortheen.nix-ide"
-            "llvm-vs-code-extensions.vscode-clangd"
-            "rust-lang.rust-analyzer"
-            "ms-python.python"
-            "charliermarsh.ruff"
-            "detachhead.basedpyright"
-            "astro-build.astro-vscode"
-            "Vue.volar"
-            "oxc.oxc-vscode"
-            "vitest.explorer"
-            "void-zero.vite-plus-extension-pack"
-            "antfu.iconify"
-          ];
+          extensions =
+            pkgs.nix4vscode.forOpenVsx [
+              "dracula-theme.theme-dracula"
+              "vscode-icons-team.vscode-icons"
+              "editorconfig.editorconfig"
+              "usernamehw.errorlens"
+              "vscodevim.vim"
+              "redhat.vscode-yaml"
+              "redhat.vscode-xml"
+              "tamasfe.even-better-toml"
+              "mechatroner.rainbow-csv"
+              "codezombiech.gitignore"
+              "ultram4rine.vscode-choosealicense"
+              "jnoortheen.nix-ide"
+              "llvm-vs-code-extensions.vscode-clangd"
+              "rust-lang.rust-analyzer"
+              "ms-python.python"
+              "charliermarsh.ruff"
+              "KevinRose.vsc-python-indent"
+              "detachhead.basedpyright"
+              "astro-build.astro-vscode"
+              "Vue.volar"
+              "oxc.oxc-vscode"
+              "vitest.explorer"
+              "void-zero.vite-plus-extension-pack"
+              "antfu.iconify"
+              "antfu.goto-alias"
+              "Nuxt.mdc"
+            ]
+            ++ pkgs.nix4vscode.forVscode [
+              "ahmadalli.vscode-nginx-conf"
+            ];
         };
       };
     };
