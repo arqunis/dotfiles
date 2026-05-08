@@ -81,7 +81,7 @@
               "void-zero.vite-plus-extension-pack"
               "antfu.iconify"
               "antfu.goto-alias"
-              "Nuxt.mdc"
+              "nuxt.mdc"
             ]
             ++ pkgs.nix4vscode.forVscode [
               "ahmadalli.vscode-nginx-conf"
