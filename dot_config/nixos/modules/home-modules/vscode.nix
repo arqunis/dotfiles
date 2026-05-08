@@ -69,6 +69,7 @@
               "ultram4rine.vscode-choosealicense"
               "jnoortheen.nix-ide"
               "llvm-vs-code-extensions.vscode-clangd"
+              "mesonbuild.mesonbuild"
               "rust-lang.rust-analyzer"
               "ms-python.python"
               "charliermarsh.ruff"
@@ -85,6 +86,7 @@
             ]
             ++ pkgs.nix4vscode.forVscode [
               "ahmadalli.vscode-nginx-conf"
+              "ms-vscode.cmake-tools"
             ];
         };
       };
