@@ -25,6 +25,7 @@
             "vsicons.dontShowNewVersionMessage" = true;
             "editor.fontSize" = 16;
             "editor.fontFamily" = "mononoki, monospace";
+            "explorer.confirmDragAndDrop" = false;
             "nix.enableLanguageServer" = true;
             "nix.serverPath" = lib.getExe pkgs.nixd;
             "nix.serverSettings" = {
