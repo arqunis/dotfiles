@@ -39,6 +39,12 @@
             "[nix]" = {
               "editor.defaultFormatter" = "jnoortheen.nix-ide";
             };
+            "[javascript]" = {
+              "editor.defaultFormatter" = "oxc.oxc-vscode";
+            };
+            "[typescript]" = {
+              "editor.defaultFormatter" = "oxc.oxc-vscode";
+            };
             "[yaml]" = {
               "editor.defaultFormatter" = "oxc.oxc-vscode";
             };
