@@ -62,10 +62,6 @@
 
         # Rust
         rustup
-
-        # Node/JS
-        pnpm
-        nodejs.out
       ];
 
       # This value determines the Home Manager release that your configuration is
