@@ -39,6 +39,12 @@
             "[nix]" = {
               "editor.defaultFormatter" = "jnoortheen.nix-ide";
             };
+            "[yaml]" = {
+              "editor.defaultFormatter" = "oxc.oxc-vscode";
+            };
+            "[json]" = {
+              "editor.defaultFormatter" = "oxc.oxc-vscode";
+            };
           };
 
           keybindings = [
