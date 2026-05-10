@@ -26,6 +26,8 @@
             "editor.fontSize" = 16;
             "editor.fontFamily" = "mononoki, monospace";
             "editor.gotoLocation.multipleDefinitions" = "goto";
+            "files.insertFinalNewline" = true;
+            "files.trimFinalNewlines" = true;
             "explorer.confirmDelete" = false;
             "explorer.confirmDragAndDrop" = false;
             "nix.enableLanguageServer" = true;
