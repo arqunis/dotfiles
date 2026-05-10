@@ -26,6 +26,7 @@
             "editor.fontSize" = 16;
             "editor.fontFamily" = "mononoki, monospace";
             "editor.gotoLocation.multipleDefinitions" = "goto";
+            "explorer.confirmDelete" = false;
             "explorer.confirmDragAndDrop" = false;
             "nix.enableLanguageServer" = true;
             "nix.serverPath" = lib.getExe pkgs.nixd;
