@@ -43,7 +43,6 @@
         extraGroups = [
           "networkmanager"
           "wheel"
-          "docker"
         ];
         shell = pkgs.zsh;
       };
@@ -55,11 +54,6 @@
       environment.pathsToLink = [ "/share/zsh" ];
 
       security.sudo.wheelNeedsPassword = false;
-
-      virtualisation.docker = {
-        enable = true;
-        storageDriver = "btrfs";
-      };
 
       hardware.bluetooth.enable = false;
 
