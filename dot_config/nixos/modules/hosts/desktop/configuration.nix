@@ -132,8 +132,6 @@
         time
         htop
 
-        mlocate
-
         zip
         unzip
         unrar
