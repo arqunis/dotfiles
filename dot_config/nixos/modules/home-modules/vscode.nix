@@ -73,6 +73,7 @@
               "codezombiech.gitignore"
               "ultram4rine.vscode-choosealicense"
               "jnoortheen.nix-ide"
+              "ms-azuretools.vscode-containers"
               "llvm-vs-code-extensions.vscode-clangd"
               "mesonbuild.mesonbuild"
               "rust-lang.rust-analyzer"
