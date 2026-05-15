@@ -8,6 +8,7 @@
         self.nixosModules.networking
         self.nixosModules.graphics
         self.nixosModules.desktopHardware
+        self.nixosModules.podman
 
         inputs.home-manager.nixosModules.home-manager
       ];
@@ -43,6 +44,7 @@
         extraGroups = [
           "networkmanager"
           "wheel"
+          "podman"
         ];
         shell = pkgs.zsh;
       };
