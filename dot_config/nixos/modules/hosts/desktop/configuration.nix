@@ -169,7 +169,7 @@
 
         smartmontools
 
-        brave
+        chromium
       ];
 
       programs.nix-ld.enable = true;
