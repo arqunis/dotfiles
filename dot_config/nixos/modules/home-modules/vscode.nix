@@ -88,6 +88,7 @@
               "void-zero.vite-plus-extension-pack"
               "antfu.iconify"
               "antfu.goto-alias"
+              "antfu.unocss"
               "nuxt.mdc"
             ]
             ++ pkgs.nix4vscode.forVscode [
