@@ -90,6 +90,7 @@
               "antfu.goto-alias"
               "antfu.unocss"
               "nuxt.mdc"
+              "dbaeumer.vscode-eslint"
             ]
             ++ pkgs.nix4vscode.forVscode [
               "ahmadalli.vscode-nginx-conf"
