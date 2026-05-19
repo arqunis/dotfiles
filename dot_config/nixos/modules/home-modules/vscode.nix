@@ -82,7 +82,6 @@
               "KevinRose.vsc-python-indent"
               "detachhead.basedpyright"
               "astro-build.astro-vscode"
-              "Vue.volar"
               "oxc.oxc-vscode"
               "vitest.explorer"
               "void-zero.vite-plus-extension-pack"
