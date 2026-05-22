@@ -3,7 +3,7 @@
   flake.homeModules.vscode =
     { pkgs, lib, ... }:
     {
-      programs.vscode = {
+      programs.vscodium = {
         enable = true;
         package = pkgs.vscodium-fhs;
 
