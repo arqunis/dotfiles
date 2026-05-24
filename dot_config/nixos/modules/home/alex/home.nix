@@ -21,6 +21,7 @@
         self.homeModules.neovim
         self.homeModules.zed
         self.homeModules.vscode
+        self.homeModules.yazi
       ];
 
       git.name = "Alex M. M.";
