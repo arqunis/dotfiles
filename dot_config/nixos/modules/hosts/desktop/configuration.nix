@@ -9,6 +9,7 @@
         self.nixosModules.graphics
         self.nixosModules.desktopHardware
         self.nixosModules.podman
+        self.nixosModules.zotero
 
         inputs.home-manager.nixosModules.home-manager
       ];
