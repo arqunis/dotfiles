@@ -66,6 +66,7 @@
               "antfu.iconify"
               "antfu.unocss"
               "astro-build.astro-vscode"
+              "bradlc.vscode-tailwindcss"
               "charliermarsh.ruff"
               "codezombiech.gitignore"
               "dbaeumer.vscode-eslint"
