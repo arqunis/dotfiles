@@ -71,6 +71,7 @@
               "tamasfe.even-better-toml"
               "mechatroner.rainbow-csv"
               "codezombiech.gitignore"
+              "ms-azuretools.vscode-docker"
               "ultram4rine.vscode-choosealicense"
               "jnoortheen.nix-ide"
               "ms-azuretools.vscode-containers"
@@ -94,6 +95,8 @@
             ++ pkgs.nix4vscode.forVscode [
               "ahmadalli.vscode-nginx-conf"
               "ms-vscode.cmake-tools"
+              "ms-vscode-remote.remote-ssh"
+              "ms-vscode-remote.remote-containers"
             ];
         };
       };
