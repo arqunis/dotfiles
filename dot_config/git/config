@@ -1,0 +1,15 @@
+[user]
+	email = "acdenissk69@gmail.com"
+	name = "Alex M. M."
+
+[pull]
+	rebase = true
+
+[rebase]
+	updateRefs = true
+
+[init]
+	defaultBranch = "main"
+
+[submodule]
+	recurse = true
