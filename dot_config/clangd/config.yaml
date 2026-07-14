@@ -1,0 +1,14 @@
+InlayHints:
+  Enabled: false
+
+---
+
+Diagnostics:
+  Suppress:
+  - unused-function
+  - unused-macros
+
+If:
+  PathMatch:
+  - .*\.h
+  - .*\.hpp
