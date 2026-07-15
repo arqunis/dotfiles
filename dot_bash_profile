@@ -1,0 +1,28 @@
+# XDG
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+
+# Editor
+export EDITOR=nvim
+export VISUAL=${EDITOR}
+
+# $PATH
+declare -a PATH_DIRS=(
+    "${HOME}/.local/bin"
+    "${HOME}/.cargo/bin"
+    "${HOME}/.local/share/pnpm/bin"
+)
+
+
+for path in "${PATH_DIRS[@]}"
+do
+    if [[ -d "${path}" ]]; then
+        export PATH="${path}:${PATH}"
+    fi
+done
+
+# Vite+
+if [[ -f "${HOME}/.vite-plus/env" ]]; then
+    "${HOME}/.vite-plus/env"
+fi
