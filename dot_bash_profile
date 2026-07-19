@@ -24,5 +24,5 @@ done
 
 # Vite+
 if [[ -f "${HOME}/.vite-plus/env" ]]; then
-    "${HOME}/.vite-plus/env"
+    source "${HOME}/.vite-plus/env"
 fi
