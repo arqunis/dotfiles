@@ -16,19 +16,15 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 ---- Plugins (via vim-plug)
-local Plug = vim.fn["plug#"]
+vim.pack.add({
+    "https://github.com/sheerun/vim-polyglot",
 
-vim.call("plug#begin")
+    "https://github.com/itchyny/lightline.vim",
+    { src = "https://github.com/dracula/vim", name = "dracula" },
 
-Plug("sheerun/vim-polyglot")
-
-Plug("itchyny/lightline.vim")
-Plug("dracula/vim", { ["as"] = "dracula" })
-
-Plug("nvim-tree/nvim-web-devicons")
-Plug("nvim-tree/nvim-tree.lua")
-
-vim.call("plug#end")
+    "https://github.com/nvim-tree/nvim-web-devicons",
+    "https://github.com/nvim-tree/nvim-tree.lua",
+})
 
 ---- Theme.
 vim.opt.background = "dark"
