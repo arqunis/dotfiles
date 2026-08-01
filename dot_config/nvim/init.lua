@@ -1,3 +1,6 @@
+-- Set the leader key to a space.
+vim.g.mapleader = " "
+
 ---- Use Unicode by default.
 vim.cmd.language("en_US.UTF-8")
 vim.opt.encoding = "utf-8"
@@ -31,9 +34,6 @@ if vim.fn.has("termguicolors") then
 end
 
 ---- Altering defaults
-
--- Set the leader key to a space.
-vim.g.mapleader = " "
 
 -- Do not show the current mode. The theme already does it for us.
 vim.opt.showmode = false
