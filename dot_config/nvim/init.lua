@@ -11,6 +11,10 @@ vim.cmd.syntax("on")
 ---- Absolute line numbering
 vim.opt.number = true
 
+---- Disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 ---- Plugins (via vim-plug)
 local Plug = vim.fn["plug#"]
 
@@ -20,6 +24,9 @@ Plug("sheerun/vim-polyglot")
 
 Plug("itchyny/lightline.vim")
 Plug("dracula/vim", { ["as"] = "dracula" })
+
+Plug("nvim-tree/nvim-web-devicons")
+Plug("nvim-tree/nvim-tree.lua")
 
 vim.call("plug#end")
 
@@ -32,6 +39,11 @@ if vim.fn.has("termguicolors") then
     vim.cmd.colorscheme("dracula")
     vim.g.lightline = { colorscheme = "dracula" }
 end
+
+---- Tree
+require("nvim-tree").setup()
+
+vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle nvim-tree' })
 
 ---- Altering defaults
 
