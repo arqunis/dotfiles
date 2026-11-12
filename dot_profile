@@ -1,0 +1,13 @@
+# NOTE: `_ENV_LOADED` must have the same name set by one of the *.conf files in environment.d
+if [ -z "${_ENV_LOADED}" ]; then
+  for f in "${HOME}"/.config/environment.d/*.conf; do
+    [ -r "$f" ] || continue
+    set -a; . "$f"; set +a
+  done
+  # Deduplicate
+  PATH=$(printf %s "${PATH}" | awk -v RS=: '!a[$0]++{printf "%s%s",s,$0;s=":"}')
+  export PATH
+fi
+
+# Vite+
+[ -f "${HOME}/.vite-plus/env" ] && . "${HOME}/.vite-plus/env"

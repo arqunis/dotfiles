@@ -1,3 +1,12 @@
-if grep -qv 'fish' /proc/$PPID/comm && [[ ${SHLVL} == [1,2] ]]; then
+[[ $- == *i* ]] || return
+
+# NOTE: `_ENV_LOADED` must have the same name set by one of the *.conf files in environment.d
+[[ -z "${_ENV_LOADED}" ]] && . ~/.profile
+
+# Run in Fish if it exists and we aren't already running in it.
+if [[ -z ${BASH_EXECUTION_STRING} && -z ${NO_FISH} ]] \
+   && [[ $(ps -o comm= -p "${PPID}") != fish ]] \
+   && (( SHLVL <= 2 )) \
+   && command -v fish >/dev/null; then
     exec fish
 fi
